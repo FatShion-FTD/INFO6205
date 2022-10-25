@@ -1,4 +1,5 @@
 import java.util.*;
+import Assignment1.ListNode;;
 
 public class RotateRight {
     // 1. Rotate List: https://leetcode.com/problems/rotate-list/
