@@ -8,10 +8,15 @@ public class Question3 {
     public static void inRange(Node node, int left, int right) {
         if (node == null)
             return;
-        inRange(node.left, left, right);
-        if (node.data >= left && node.data <= right)
+        if (node.data >= left && node.data <= right) {
+            inRange(node.left, left, right);
             System.out.print(node.data + ", ");
-        inRange(node.right, left, right);
+            inRange(node.right, left, right);
+        } else if (node.data > right) {
+            inRange(node.left, left, right);
+        } else {
+            inRange(node.right, left, right);
+        }
     }
 
     // Given range between 5 and 8 it will print 6, 7, 8

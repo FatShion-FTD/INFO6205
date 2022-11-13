@@ -54,6 +54,7 @@ public class BinTree {
                 if (prev != null) {
                     prev.nextLeft = node;
                 }
+                System.out.println((prev == null ? "NULL" : prev.data) + "   ->  " + node.data);
                 prev = node;
 
                 if (node.right != null)
@@ -62,6 +63,7 @@ public class BinTree {
                     q.offer(node.left);
             }
             prev.nextLeft = null;
+            System.out.println(prev.data + "    ->  NULL");
         }
         return;
     }
